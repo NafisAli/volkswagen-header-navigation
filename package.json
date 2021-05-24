@@ -17,7 +17,7 @@
     "prefix:sass": "yarn postcss $INIT_CWD/includes/css/development.css --use autoprefixer --replace --build",
     "minify:sass": "yarn cleancss $INIT_CWD/includes/css/production.css --output $INIT_CWD/includes/css/production.css",
     "prefix:sass:production": "yarn postcss $INIT_CWD/includes/css/production.css --use autoprefixer --replace --build",
-    "build:sass:development": "yarn lint:sass && yarn node-sass $INIT_CWD/includes/css/scss/development.scss --output $INIT_CWD/includes/css/development.css --source-map-embed --source-map-contents && yarn run prefix:sass",
+    "build:sass:development": "yarn lint:sass && yarn node-sass $INIT_CWD/includes/css/scss/development.scss --output $INIT_CWD/includes/css/ --source-map-embed --source-map-contents && yarn run prefix:sass",
     "build:sass:production": "yarn node-sass $INIT_CWD/includes/css/scss/production.scss --output $INIT_CWD/includes/css/ && yarn run prefix:sass:production && yarn minify:sass",
     "build:sass:all": "yarn build:sass:development && yarn build:sass:production",
     "watch:sass": "yarn nodemon -e scss,sass -x \"yarn lint:sass & yarn build:sass:all\"",
