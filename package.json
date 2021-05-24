@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "clean-css-cli": "^5.3.0",
+    "live-server": "^1.2.1",
+    "nodemon": "^2.0.7",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "sass-lint": "^1.13.1"
+  },
+  "scripts": {
+    "start": "yarn live-server --port=8000",
+    "lint:sass": "yarn sass-lint --verbose --no-exit $INIT_CWD/includes/css/scss/*.scss $INIT_CWD/includes/css/scss/*.sass",
+    "prefix:sass": "yarn postcss $INIT_CWD/includes/css/development.css --use autoprefixer --replace --build",
+    "minify:sass": "yarn cleancss $INIT_CWD/includes/css/production.css --output $INIT_CWD/includes/css/production.css",
+    "prefix:sass:production": "yarn postcss $INIT_CWD/includes/css/production.css --use autoprefixer --replace --build",
+    "build:sass:development": "yarn lint:sass && yarn node-sass $INIT_CWD/includes/css/scss/development.scss --output $INIT_CWD/includes/css/development.css --source-map-embed --source-map-contents && yarn run prefix:sass",
+    "build:sass:production": "yarn node-sass $INIT_CWD/includes/css/scss/production.scss --output $INIT_CWD/includes/css/ && yarn run prefix:sass:production && yarn minify:sass",
+    "build:sass:all": "yarn build:sass:development && yarn build:sass:production",
+    "watch:sass": "yarn nodemon -e scss,sass -x \"yarn lint:sass & yarn build:sass:all\"",
+    "lint-win:sass": "yarn sass-lint --verbose --no-exit %CD%/includes/css/scss/*.scss %CD%/includes/css/scss/*.sass",
+    "prefix-win:sass": "yarn postcss %CD%/includes/css/development.css --use autoprefixer --replace --build",
+    "minify-win:sass": "yarn cleancss %CD%/includes/css/production.css --output %CD%/includes/css/production.css",
+    "prefix-win:sass:production": "yarn postcss %CD%/includes/css/production.css --use autoprefixer --replace --build",
+    "build-win:sass:development": "yarn lint-win:sass && yarn node-sass %CD%/includes/css/scss/development.scss --output %CD%/includes/css/ --source-map-embed --source-map-contents && yarn run prefix-win:sass",
+    "build-win:sass:production": "yarn node-sass %CD%/includes/css/scss/production.scss --output %CD%/includes/css/ && yarn run prefix-win:sass:production && yarn minify-win:sass",
+    "build-win:sass:all": "yarn build-win:sass:development && yarn build-win:sass:production",
+    "watch-win:sass": "yarn nodemon -e scss,sass -x \"yarn lint-win:sass & yarn build-win:sass:all\""
+  },
+  "sasslintconfig": ".sasslintrc"
+}
