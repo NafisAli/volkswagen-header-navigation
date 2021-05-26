@@ -9,7 +9,7 @@
 	&::after {
 		content: "";
 		height: 2px;
-		width: 33%;
+		width: $one-third;
 		background: $white;
 	}
 }
