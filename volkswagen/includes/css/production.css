@@ -1,1 +1,1 @@
-*,::after,::before{box-sizing:inherit}html{box-sizing:border-box}body{margin:0;background:#fff}img{width:100%}
+*,::after,::before{box-sizing:inherit}html{box-sizing:border-box}body{margin:0;background:#fff}img{width:100%}.headerNavigationWrapper{background-color:rgba(0,0,0,.5);position:absolute}.brandLogo{width:56px;height:56px;fill:#fff;margin:0 10px}.dealerName{color:#fff;margin:0 10px;font-size:24px}
