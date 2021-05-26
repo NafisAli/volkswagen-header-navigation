@@ -12,6 +12,34 @@
 		width: $one-third;
 		background: $white;
 	}
+
+	@include animationEaseIn(250ms, null);
+
+	&:hover {
+		background-color: $white;
+
+		&::before,
+		&::after {
+			background: $black;
+		}
+
+		.logoDealerNameWrapper {
+			&::before,
+			&::after {
+				background: $black;
+			}
+		}
+
+		.brandLogo {
+			fill: $black;
+		}
+
+		.dealerName {
+			color: $black;
+		}
+
+		@include animationEaseIn(250ms, null);
+	}
 }
 
 .logoDealerNameWrapper {
