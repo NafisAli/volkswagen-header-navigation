@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+  background: url(https://s3-ap-southeast-2.amazonaws.com/imotor-cms/images_cms/183360_volkswagen-amarok-v6-aventura-hpb-mar21-mj.jpg) no-repeat;
+  margin: 0;
+  background-size: cover;
+}
