@@ -1,0 +1,77 @@
+.headerNavigationWrapper {
+	display: flex;
+	align-items: center;
+	background-color: $black-opacity-50;
+	position: absolute;
+	width: 100%;
+
+	&::before,
+	&::after {
+		content: "";
+		height: 2px;
+		width: $one-third;
+		background: $white;
+	}
+
+	@include animationEaseIn(250ms, null);
+
+	&:hover {
+		background-color: $white;
+
+		&::before,
+		&::after {
+			background: $black;
+		}
+
+		.logoDealerNameWrapper {
+			&::before,
+			&::after {
+				background: $black;
+			}
+		}
+
+		.brandLogo {
+			fill: $black;
+		}
+
+		.dealerName {
+			color: $black;
+		}
+
+		@include animationEaseIn(250ms, null);
+	}
+}
+
+.logoDealerNameWrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 10px 0;
+	min-width: $container-width;
+
+	&::before {
+		content: "";
+		height: 2px;
+		width: 1%;
+		background: $white;
+	}
+
+	&::after {
+		content: "";
+		height: 2px;
+		flex-grow: 1;
+		background: $white;
+	}
+}
+
+.brandLogo {
+	width: 56px;
+	height: 56px;
+	fill: $white;
+}
+
+.dealerName {
+	@include primaryFontStack;
+	color: $white;
+	font-size: 20px;
+}

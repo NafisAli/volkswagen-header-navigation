@@ -1,0 +1,13 @@
+@mixin animationEaseIn($duration, $delay) {
+	transition-property: all;
+
+	@if $duration {
+		transition-duration: $duration;
+	}
+
+	transition-timing-function: ease-in;
+
+	@if $delay {
+		transition-delay: $delay;
+	}
+}

@@ -33,7 +33,7 @@
 		"no-important": 2,
 		"no-invalid-hex": 2,
 		"no-mergeable-selectors": 2,
-		"no-misspelled-properties": 2,
+		"no-misspelled-properties": 1,
 		"no-qualifying-elements": [
 			1,
 			{
@@ -59,7 +59,7 @@
 			1,
 			{
 				"allow-leading-underscore": false,
-				"convention": "hyphenatedlowercase"
+				"convention": "camelcase"
 			}
 		],
 		"function-name-format": 0,
