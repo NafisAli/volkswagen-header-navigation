@@ -1,4 +1,4 @@
-@mixin animationEaseIn($duration, $delay) {
+@mixin animationEaseInAll($duration, $delay) {
 	transition-property: all;
 
 	@if $duration {
