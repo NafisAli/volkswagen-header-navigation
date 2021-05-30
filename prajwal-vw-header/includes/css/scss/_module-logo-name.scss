@@ -1,70 +1,88 @@
-.header-wrapper {
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(1200px, auto) minmax(20px, 1fr);
+.lineLeft {
+	display: grid;
+	color: $white;
 }
 
-.line-left {
-  display: grid;
-  color: #fff;
+.lineLeft::before {
+	content: "";
+	border-top: 2px solid;
+	margin-top: 61px;
 }
 
-.line-left::before {
-  content: "";
-  border-top: 2px solid;
-  margin-top: 61px;
+.headerWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1200px 1fr;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	transition: background-color 250ms ease-in-out;
+
+	&:hover {
+		background-color: $white;
+
+		&::before,
+		&::after {
+			border-top: 2px solid $black;
+		}
+
+		.brandLogoDealerNameWrapper {
+			&::before,
+			&::after {
+				border-top: 2px solid $black;
+			}
+		}
+
+		.brandLogo {
+			fill: $black;
+		}
+
+		.dealerName {
+			color: $black;
+		}
+	}
 }
 
-.container {
-  max-width: 1200px;
+.headerWrapper::before,
+.headerWrapper::after {
+	content: "";
+	border-top: 2px solid white;
 }
 
-.logo-name-wrapper {
-  display: grid;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-  grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 10fr);
-  grid-gap: 20px;
-  margin: 30px 0;
-  color: #fff;
+.brandLogoDealerNameWrapper {
+	display: grid;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 10fr);
+	grid-gap: 20px;
+	margin: 35px 0;
+	color: #fff;
+	max-width: 1200px;
 }
 
-.logo-name-wrapper::before,
-.logo-name-wrapper::after {
-  content: "";
-  border-top: 2px solid;
+.brandLogoDealerNameWrapper::before,
+.brandLogoDealerNameWrapper::after {
+	content: "";
+	border-top: 2px solid $white;
 }
 
-.logo-name {
-  display: flex;
-  align-items: center;
+.brandLogoDealerNameLink {
+	text-decoration: none;
 }
 
-.logo {
-  height: 40px;
-  width: 40px;
-  border: 2px solid #fff;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border-radius: 50%;
-  padding: 10px;
+.logoName {
+	display: flex;
+	align-items: center;
 }
 
-.dealer-name {
-  color: #fff;
-  padding: 10px;
+.brandLogo {
+	width: 48px;
+	height: 48px;
+	fill: $white;
 }
 
-.line-right {
-  display: grid;
-  color: #fff;
-}
-
-.line-right::after {
-  content: "";
-  border-top: 2px solid;
-  margin-top: 61px;
+.dealerName {
+	color: $white;
+	padding: 10px;
 }
