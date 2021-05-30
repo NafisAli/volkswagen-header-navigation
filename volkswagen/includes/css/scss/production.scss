@@ -2,9 +2,12 @@
 @import "variables";
 @import "layout";
 
-//mixins
+
+
+//mixins and functions
+@import "functions";
 @import "animations";
-@import "mixin-fonts";
+@import "mixins-fonts";
 
 //modules
 @import "module-header-navigation";
