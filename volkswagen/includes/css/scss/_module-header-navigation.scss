@@ -9,24 +9,24 @@
 	&::after {
 		content: "";
 		height: 2px;
-		width: $one-third;
-		background: $white;
+		width: 100%;
+		background-color: $white;
 	}
 
-	@include animationEaseIn(250ms, null);
+	@include animationEaseInAll(250ms, null);
 
 	&:hover {
 		background-color: $white;
 
 		&::before,
 		&::after {
-			background: $black;
+			background-color: $black;
 		}
 
 		.logoDealerNameWrapper {
 			&::before,
 			&::after {
-				background: $black;
+				background-color: $black;
 			}
 		}
 
@@ -38,8 +38,12 @@
 			color: $black;
 		}
 
-		@include animationEaseIn(250ms, null);
+		@include animationEaseInAll(250ms, null);
 	}
+}
+
+.logoDealerNameLink {
+	text-decoration: none;
 }
 
 .logoDealerNameWrapper {
@@ -47,7 +51,8 @@
 	align-items: center;
 	gap: 20px;
 	padding: 10px 0;
-	min-width: $container-width;
+	width: 100vw;
+	max-width: $container-width;
 
 	&::before {
 		content: "";
@@ -65,8 +70,8 @@
 }
 
 .brandLogo {
-	width: 56px;
-	height: 56px;
+	width: $logo-width;
+	height: $logo-height;
 	fill: $white;
 }
 
