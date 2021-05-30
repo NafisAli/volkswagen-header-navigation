@@ -75,3 +75,4 @@ typings/
 # FuseBox cache
 .fusebox/
 includes/.DS_Store
+volkswagen/.DS_Store
