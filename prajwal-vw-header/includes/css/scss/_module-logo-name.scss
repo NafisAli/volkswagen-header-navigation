@@ -1,14 +1,3 @@
-.lineLeft {
-	display: grid;
-	color: $white;
-}
-
-.lineLeft::before {
-	content: "";
-	border-top: 2px solid;
-	margin-top: 61px;
-}
-
 .headerWrapper {
 	display: grid;
 	grid-template-columns: 1fr 1200px 1fr;
