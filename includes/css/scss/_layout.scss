@@ -9,5 +9,16 @@ html {
 }
 
 body {
+	margin: 0;
 	background: $white;
+	color: $black;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	max-width: $container-width;
+	margin: auto;
 }
