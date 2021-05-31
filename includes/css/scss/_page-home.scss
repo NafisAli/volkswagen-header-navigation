@@ -52,6 +52,7 @@
 
 .projectLinks {
 	text-align: center;
+	margin: 20px 0;
 }
 
 .buttonGroup {
@@ -78,24 +79,136 @@
 	}
 }
 
-.milestoneItems {
-	display: flex;
-	align-items: center;
+.milestones {
+	.titleText {
+		text-align: center;
+		margin: 20px 0;
+	}
+}
+
+.milestoneItemWrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 50%;
 }
 
 .milestone {
 	display: flex;
 	align-items: center;
+	flex-direction: row;
 	@include primaryFontStackConBold;
 	text-align: center;
 	list-style: none;
-	min-width: 10%;
+	padding-bottom: 50px;
+	position: relative;
 
-	&::before,
-	&::after {
+	&::before {
 		content: "";
-		height: 5px;
+		position: absolute;
+		height: 100%;
+		width: 3px;
+		left: 49.9%;
+		top: 0%;
 		background-color: $black30;
-		width: 100%;
 	}
+
+	&.active {
+		.point {
+			background-color: $green;
+			border-color: $green;
+		}
+
+		&::before {
+			background-color: $green;
+		}
+	}
+
+	&:first-child {
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 3px;
+			left: 49.9%;
+			top: 20%;
+
+			&.active {
+				background-color: $green;
+			}
+		}
+	}
+
+	&:last-child {
+		padding-bottom: 0px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 50%;
+			width: 3px;
+			left: 49.9%;
+			top: 0%;
+			background-color: $black30;
+
+			&.active {
+				background-color: $green;
+			}
+		}
+	}
+
+	&:nth-child(odd) {
+		.content {
+			padding-left: 0;
+		}
+
+		.date {
+			padding-right: 0;
+		}
+	}
+
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+
+		.content {
+			padding-right: 0;
+		}
+
+		.date {
+			flex-direction: row-reverse;
+			padding-left: 0;
+			float: right;
+		}
+	}
+
+	.content {
+		width: 50%;
+	}
+}
+
+.content {
+	@include primaryFontStack;
+	padding: 20px 20px;
+	background-color: $primaryColor;
+	color: $white;
+	margin-bottom: 0;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.point {
+	min-width: 20px;
+	height: 20px;
+	background-color: $black30;
+	border-radius: 100%;
+	z-index: 2;
+	border: 3px solid $black30;
+	position: relative;
+	left: 1px;
+	margin: 0 10px;
+}
+
+.date {
+	display: flex;
+	@include primaryFontStackConBold;
+	width: 50%;
 }
