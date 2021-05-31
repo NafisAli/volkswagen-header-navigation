@@ -18,6 +18,10 @@ img {
 	width: 100%;
 }
 
+ul {
+	padding-inline-start: 0;
+}
+
 .container {
 	max-width: $container-width;
 	margin: auto;
