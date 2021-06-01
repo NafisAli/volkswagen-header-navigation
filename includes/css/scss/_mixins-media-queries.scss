@@ -1,6 +1,6 @@
-/* ==========================================================================
-   Mixins
-   ========================================================================== */
+// ==========================================================================
+// Mixins
+// ========================================================================== */
 
 // Auto generate separate CSS without @media queries for IE7/8
 // https://github.com/sass/sass/issues/408 Chris Eptstein
@@ -34,11 +34,7 @@ $is-ie7: false !default;
 			@content;
 		}
 	} @else {
-		@if $pMinWidth <
-			$fixedWidthThreshold and
-			$pMaxWidth <
-			$fixedWidthThreshold
-		{
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
 			@content;
 		}
 	}
@@ -70,11 +66,7 @@ $is-ie7: false !default;
 			@content;
 		}
 	} @else {
-		@if $pMinWidth <
-			$fixedWidthThreshold and
-			$pMaxWidth <
-			$fixedWidthThreshold
-		{
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
 			@content;
 		}
 	}
@@ -105,11 +97,7 @@ $is-ie7: false !default;
 			@content;
 		}
 	} @else {
-		@if $pMinWidth <
-			$fixedWidthThreshold and
-			$pMaxWidth <
-			$fixedWidthThreshold
-		{
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
 			@content;
 		}
 	}
@@ -140,11 +128,7 @@ $is-ie7: false !default;
 			@content;
 		}
 	} @else {
-		@if $pMinWidth <
-			$fixedWidthThreshold and
-			$pMaxWidth <
-			$fixedWidthThreshold
-		{
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
 			@content;
 		}
 	}
