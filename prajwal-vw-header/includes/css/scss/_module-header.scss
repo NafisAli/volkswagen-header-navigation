@@ -47,7 +47,10 @@
 
 .addressbarWrapper {
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	// Using flex
+	// display: flex;
+	// flex-direction: column;
 }
 
 .locations {
