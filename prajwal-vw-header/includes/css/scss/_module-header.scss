@@ -41,6 +41,8 @@
 .headerWrapper::after {
 	content: "";
 	border-top: 2px solid white;
+	position: relative;
+	top: -15px;
 }
 
 .addressbarWrapper {
@@ -52,6 +54,8 @@
 	display: flex;
 	justify-content: flex-end;
 	color: $white;
+	position: relative;
+	top: 5px;
 }
 
 .address {
@@ -92,6 +96,8 @@
 	text-align: center;
 	grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 30fr);
 	grid-gap: 20px;
+	position: relative;
+	top: -15px;
 }
 
 .brandLogoDealerNameWrapper::before,
