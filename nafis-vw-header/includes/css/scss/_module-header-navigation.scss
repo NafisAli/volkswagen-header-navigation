@@ -54,6 +54,10 @@
 	width: 100vw;
 	max-width: $container-width;
 
+	@include respond-screen($bp-md) {
+		min-width: $container-width;
+	}
+
 	&::before {
 		content: "";
 		height: 2px;
