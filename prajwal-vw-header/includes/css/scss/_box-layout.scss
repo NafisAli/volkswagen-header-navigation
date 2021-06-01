@@ -1,0 +1,7 @@
+.box-rl {
+	padding: 0 1em;
+
+	@include respond-screen($bp-md) {
+		padding: 0 1.5em;
+	}
+}
