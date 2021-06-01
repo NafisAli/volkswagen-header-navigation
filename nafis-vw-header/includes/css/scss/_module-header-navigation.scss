@@ -43,6 +43,9 @@
 }
 
 .logoDealerNameLink {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 	text-decoration: none;
 }
 
@@ -51,8 +54,8 @@
 	align-items: center;
 	gap: 20px;
 	padding: 10px 0;
-	width: 100vw;
-	max-width: $container-width;
+
+	min-width: 100vw;
 
 	@include respond-screen($bp-md) {
 		min-width: $container-width;
@@ -61,7 +64,7 @@
 	&::before {
 		content: "";
 		height: 2px;
-		width: 1%;
+		width: 2%;
 		background: $white;
 	}
 
