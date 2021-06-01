@@ -1,6 +1,6 @@
 .headerWrapper {
 	display: grid;
-	grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
+	grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
 	align-items: center;
 	background-color: $header-bg-color;
 	position: absolute;
