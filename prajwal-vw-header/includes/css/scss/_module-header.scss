@@ -145,9 +145,13 @@
 .navPrimaryItem {
 	@include primaryFontStack;
 	list-style-type: none;
-	margin-left: auto;
 	color: $white;
 	font-size: 13px;
+	padding-right: 25px;
+
+	&:last-child {
+		padding-right: 0;
+	}
 }
 
 .icon-svg-nav-arrow {
