@@ -44,6 +44,8 @@ $black94: #0f0f0f;
 $black95: #0d0d0d;
 $black97: #2d2a2b;
 
+$black-opacity-50: rgba(0, 0, 0, 0.5);
+
 //---------------------------------------------------
 
 $container-width: 1400px;
@@ -56,6 +58,11 @@ $bp-md: 768px;
 $bp-md-2: 880px;
 $bp-lg: 1024px;
 $bp-xl: 1280px;
+
+//---------------------------------------------------
+
+$logo-width: 56px;
+$logo-height: 56px;
 
 //s3 path for fonts
 $assets-path: "https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/vw";
