@@ -7,7 +7,6 @@ $white: #fff;
 $black: #000;
 $green: #080;
 
-//- - - - - - - - - - -
 $black3: #f7f7f7;
 $black4: #f5f5f5;
 $black5: #f2f2f2;
@@ -44,7 +43,18 @@ $black94: #0f0f0f;
 $black95: #0d0d0d;
 $black97: #2d2a2b;
 
+//---------------------------------------------------
+
 $container-width: 1400px;
+$fixedWidthThreshold: 1025px;
+
+$bp-xs: 384px;
+$bp-sm: 568px;
+$bp-sm-2: 640px;
+$bp-md: 768px;
+$bp-md-2: 880px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
 
 //s3 path for fonts
 $assets-path: "https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/vw";
