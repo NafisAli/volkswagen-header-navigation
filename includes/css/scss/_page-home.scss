@@ -1,13 +1,21 @@
-.headerContent {
-	background-color: $white;
-	border-bottom: 1px solid $black10;
+.header {
+	background-color: $primaryColor;
+	border-bottom: 1px solid $black30;
 }
 
 .headerTitle {
 	@include primaryFontStackBold;
 	text-align: center;
+	font-size: 32px;
+	line-height: 42px;
+	color: $white;
 	padding: 10px;
 	margin: 0;
+
+	@include respond-screen($bp-md) {
+		font-size: 48px;
+		line-height: 56px;
+	}
 }
 
 .pageContent {
@@ -15,24 +23,67 @@
 	padding: 15px;
 }
 
+.summarySection,
+.linksSection,
+.milestoneSection {
+	margin: 0 0 50px 0;
+	padding: 20px;
+}
+
+.linksSection {
+	background-color: $primaryColor;
+	color: $white;
+	border-radius: 10px;
+
+	.titleText {
+		color: $white;
+	}
+}
+
+.pageDescription {
+	display: flex;
+	flex-direction: column;
+
+	@include respond-screen($bp-md) {
+		flex-direction: row;
+	}
+}
+
+.descriptionTitleTextWrapper {
+	width: 100%;
+
+	@include respond-screen($bp-md) {
+		width: 50%;
+	}
+}
+
 .titleText {
 	@include primaryFontStackBold;
+	font-size: 32px;
+	line-height: 42px;
+	color: $primaryColor;
 	margin: 20px 0;
 }
 
 .descriptionTitle {
 	@include primaryFontStackBold;
-	margin: 20px 0;
+	font-size: 24px;
 }
 
 .descriptionText {
 	@include primaryFontStack;
+	font-size: 20px;
 }
 
 .descriptionImageTextWrapper {
+	width: 100%;
 	margin: 20px 0;
 	border: 1px solid $black20;
 	border-top: 0;
+
+	@include respond-screen($bp-md) {
+		width: 50%;
+	}
 }
 
 .imageTitle {
@@ -51,35 +102,49 @@
 }
 
 .projectLinks {
-	text-align: center;
 	margin: 20px 0;
+}
+
+.projectTitleTextWrapper {
+	width: 100%;
+
+	@include respond-screen($bp-md) {
+		width: 50%;
+	}
 }
 
 .buttonGroup {
 	display: flex;
 	justify-content: center;
+	gap: 10px;
 }
 
 .button {
 	@include primaryFontStackConBold;
 	font-size: 20px;
-	color: $white;
+	color: $primaryColor;
 	text-decoration: none;
 	text-align: center;
-	background-color: $primaryColor;
-	min-width: 10%;
-	margin: 0 20px;
-	padding: 10px 40px;
+	background-color: $white;
+	min-width: 50%;
+	padding: 10px 20px;
 	border-radius: 80px;
+
+	@include respond-screen($bp-md) {
+		min-width: 20%;
+		padding: 10px 40px;
+	}
 
 	@include animationEaseInAll(250ms, null);
 
 	&:hover {
-		background-color: $primaryColor-light;
+		background-color: $secondaryColor;
 	}
 }
 
 .milestones {
+	margin: 20px 0;
+
 	.titleText {
 		text-align: center;
 		margin: 20px 0;
@@ -112,8 +177,12 @@
 		height: 100%;
 		width: 4px;
 		top: 0%;
-		left: 49.8%;
+		left: 49.6%;
 		background-color: $black30;
+
+		@include respond-screen($bp-md) {
+			left: 49.8%;
+		}
 	}
 
 	&.active {
@@ -145,8 +214,12 @@
 			height: 50%;
 			width: 4px;
 			top: 0%;
-			left: 49.8%;
+			left: 49.6%;
 			background-color: $black30;
+
+			@include respond-screen($bp-md) {
+				left: 49.8%;
+			}
 		}
 	}
 
