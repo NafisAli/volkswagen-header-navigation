@@ -2,10 +2,8 @@
 	position: absolute;
 	width: 100%;
 
-	@include animationEaseInAll(250ms, null);
-
 	&:hover {
-		.addressBar {
+		.addressBarWrapper {
 			background-color: $white;
 		}
 
@@ -37,7 +35,9 @@
 			}
 		}
 
-		.brandLogo {
+		.brandLogo,
+		.iconLocation,
+		.iconPhone {
 			fill: $black;
 		}
 
@@ -47,8 +47,13 @@
 	}
 }
 
-.addressBar {
+.addressBarWrapper {
 	background-color: $black-opacity-50;
+
+	@include animationEaseInAll(250ms, null);
+}
+
+.addressBar {
 	display: flex;
 	justify-content: flex-end;
 	gap: 20px;
@@ -74,9 +79,24 @@
 }
 
 .addressBarText {
+	display: flex;
+	align-items: center;
+	gap: 5px;
 	@include primaryFontStack;
 	color: $white;
 	text-decoration: none;
+}
+
+.iconLocation {
+	fill: $white;
+	height: 20px;
+	width: 20px;
+}
+
+.iconPhone {
+	fill: $white;
+	height: 20px;
+	width: 20px;
 }
 
 .brandDealership {
