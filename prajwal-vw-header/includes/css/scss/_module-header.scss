@@ -20,14 +20,16 @@
 			border-top: 2px solid $black;
 		}
 
-		.locations,
+		.addressBarDealerInformation,
+		.dealerAddressLink,
+		.dealerPhoneNumberLink,
 		.dealerName,
 		.navPrimaryItem {
 			color: $black;
 		}
 
 		.icon-svg,
-		.brandLogo {
+		.brandLogoSvg {
 			fill: $black;
 		}
 
