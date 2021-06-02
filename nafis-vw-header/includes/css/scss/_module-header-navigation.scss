@@ -110,7 +110,7 @@
 	&::before {
 		content: "";
 		height: 2px;
-		width: 2%;
+		width: 5%;
 		background-color: $white;
 	}
 
@@ -142,7 +142,7 @@
 .dealerName {
 	@include primaryFontStackBold;
 	color: $white;
-	font-size: 32px;
+	font-size: 20px;
 
 	@include animationEaseInAll(250ms, null);
 }
