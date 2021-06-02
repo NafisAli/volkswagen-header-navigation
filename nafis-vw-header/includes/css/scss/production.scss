@@ -1,11 +1,15 @@
-//base
+//variables
 @import "variables";
-@import "layout";
 
 //mixins and functions
 @import "external-fonts";
 @import "mixins-fonts";
 @import "mixins-media-queries";
 @import "animations";
+
+//base
+@import "layout";
+@import "box-layout";
+
 //modules
 @import "module-header-navigation";
