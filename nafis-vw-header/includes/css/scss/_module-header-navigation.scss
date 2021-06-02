@@ -9,7 +9,7 @@
 			color: $black;
 
 			&::after {
-				color: $black;
+				border-color: $black;
 			}
 		}
 
@@ -79,8 +79,9 @@
 
 	&:not(:last-child) {
 		&::after {
-			content: "|";
-			color: $white;
+			content: "";
+			height: 100%;
+			border-left: 2px solid $white;
 
 			@include animationEaseInAll($transition-duration, null);
 		}
@@ -192,6 +193,11 @@
 .navigationBar {
 	position: relative;
 	top: -60px;
+	display: none;
+
+	@include respond-screen($bp-md-2) {
+		display: block;
+	}
 }
 
 .navigationMenuWrapper {
