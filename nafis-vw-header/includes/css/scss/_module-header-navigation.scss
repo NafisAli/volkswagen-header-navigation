@@ -1,12 +1,10 @@
 .headerInformation {
+	display: flex;
+	flex-direction: column;
 	position: absolute;
 	width: 100%;
 
 	&:hover {
-		.addressBarWrapper {
-			background-color: $white;
-		}
-
 		.dealerInformation {
 			color: $black;
 
@@ -48,23 +46,23 @@
 }
 
 .addressBarWrapper {
-	background-color: $black-opacity-50;
-
-	@include animationEaseInAll(250ms, null);
+	position: relative;
+	top: 20px;
+	z-index: 1;
 }
 
 .addressBar {
 	display: flex;
 	justify-content: flex-end;
-	gap: 20px;
+	gap: 10px;
 
-	@include animationEaseInAll(250ms, null);
+	@include animationEaseInAll($transition-duration, null);
 }
 
 .dealerInformation {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 10px;
 
 	&::after {
 		content: "|";
@@ -83,6 +81,7 @@
 	align-items: center;
 	gap: 5px;
 	@include primaryFontStack;
+	font-size: 13px;
 	color: $white;
 	text-decoration: none;
 }
@@ -103,6 +102,13 @@
 	display: flex;
 	align-items: center;
 	background-color: $black-opacity-50;
+	height: 65px;
+	position: relative;
+	top: -20px;
+
+	@include respond-screen($bp-md) {
+		height: 120px;
+	}
 
 	&::before,
 	&::after {
@@ -112,7 +118,7 @@
 		background-color: $white;
 	}
 
-	@include animationEaseInAll(250ms, null);
+	@include animationEaseInAll($transition-duration, null);
 }
 
 .logoDealerNameWrapper {
@@ -121,7 +127,7 @@
 	gap: 20px;
 	min-width: 100vw;
 
-	@include animationEaseInAll(250ms, null);
+	@include animationEaseInAll($transition-duration, null);
 
 	@include respond-screen($bp-md) {
 		min-width: $container-width;
@@ -148,7 +154,7 @@
 	gap: 20px;
 	text-decoration: none;
 
-	@include animationEaseInAll(250ms, null);
+	@include animationEaseInAll($transition-duration, null);
 }
 
 .brandLogo {
@@ -156,7 +162,7 @@
 	height: $logo-height;
 	fill: $white;
 
-	@include animationEaseInAll(250ms, null);
+	@include animationEaseInAll($transition-duration, null);
 }
 
 .dealerName {
@@ -164,5 +170,5 @@
 	color: $white;
 	font-size: 20px;
 
-	@include animationEaseInAll(250ms, null);
+	@include animationEaseInAll($transition-duration, null);
 }
