@@ -43,7 +43,7 @@
 			color: $black;
 		}
 
-		.navigationItem {
+		.navigationItemLink {
 			color: $black;
 
 			&::after {
@@ -211,13 +211,14 @@
 	list-style: none;
 }
 
-.navigationItem {
+.navigationItemLink {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	@include primaryFontStack;
 	color: $white;
 	font-size: 15px;
+	text-decoration: none;
 
 	&::after {
 		content: "";
