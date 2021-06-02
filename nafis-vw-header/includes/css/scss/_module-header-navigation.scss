@@ -1,26 +1,33 @@
-.headerNavigationWrapper {
-	display: flex;
-	align-items: center;
-	background-color: $black-opacity-50;
+.headerInformation {
 	position: absolute;
 	width: 100%;
-
-	&::before,
-	&::after {
-		content: "";
-		height: 2px;
-		width: 100%;
-		background-color: $white;
-	}
 
 	@include animationEaseInAll(250ms, null);
 
 	&:hover {
-		background-color: $white;
+		.addressBar {
+			background-color: $white;
+		}
 
-		&::before,
-		&::after {
-			background-color: $black;
+		.dealerInformation {
+			color: $black;
+
+			&::after {
+				color: $black;
+			}
+		}
+
+		.addressBarText {
+			color: $black;
+		}
+
+		.brandDealership {
+			background-color: $white;
+
+			&::before,
+			&::after {
+				background-color: $black;
+			}
 		}
 
 		.logoDealerNameWrapper {
@@ -37,25 +44,64 @@
 		.dealerName {
 			color: $black;
 		}
-
-		@include animationEaseInAll(250ms, null);
 	}
 }
 
-.logoDealerNameLink {
+.addressBar {
+	background-color: $black-opacity-50;
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+
+	@include animationEaseInAll(250ms, null);
+}
+
+.dealerInformation {
 	display: flex;
 	align-items: center;
 	gap: 20px;
+
+	&::after {
+		content: "|";
+		color: $white;
+	}
+
+	&:last-child {
+		&::after {
+			content: "";
+		}
+	}
+}
+
+.addressBarText {
+	@include primaryFontStack;
+	color: $white;
 	text-decoration: none;
+}
+
+.brandDealership {
+	display: flex;
+	align-items: center;
+	background-color: $black-opacity-50;
+
+	&::before,
+	&::after {
+		content: "";
+		height: 2px;
+		width: 100%;
+		background-color: $white;
+	}
+
+	@include animationEaseInAll(250ms, null);
 }
 
 .logoDealerNameWrapper {
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	padding: 10px 0;
-
 	min-width: 100vw;
+
+	@include animationEaseInAll(250ms, null);
 
 	@include respond-screen($bp-md) {
 		min-width: $container-width;
@@ -65,25 +111,38 @@
 		content: "";
 		height: 2px;
 		width: 2%;
-		background: $white;
+		background-color: $white;
 	}
 
 	&::after {
 		content: "";
 		height: 2px;
 		flex-grow: 1;
-		background: $white;
+		background-color: $white;
 	}
+}
+
+.logoDealerNameLink {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	text-decoration: none;
+
+	@include animationEaseInAll(250ms, null);
 }
 
 .brandLogo {
 	width: $logo-width;
 	height: $logo-height;
 	fill: $white;
+
+	@include animationEaseInAll(250ms, null);
 }
 
 .dealerName {
-	@include primaryFontStack;
+	@include primaryFontStackBold;
 	color: $white;
-	font-size: 20px;
+	font-size: 32px;
+
+	@include animationEaseInAll(250ms, null);
 }
