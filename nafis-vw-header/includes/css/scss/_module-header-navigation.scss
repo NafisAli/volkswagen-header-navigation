@@ -3,8 +3,14 @@
 	flex-direction: column;
 	position: absolute;
 	width: 100%;
+	background-color: $black-opacity-50;
+	padding: 20px 0;
+
+	@include animationEaseInAll($transition-duration, null);
 
 	&:hover {
+		background-color: $white;
+
 		.dealerInformation {
 			color: $black;
 
@@ -18,8 +24,6 @@
 		}
 
 		.brandDealership {
-			background-color: $white;
-
 			&::before,
 			&::after {
 				background-color: $black;
@@ -55,8 +59,6 @@
 
 .addressBarWrapper {
 	position: relative;
-	top: 20px;
-	z-index: 1;
 	display: none;
 
 	@include respond-screen($bp-md-2) {
@@ -112,14 +114,7 @@
 .brandDealership {
 	display: flex;
 	align-items: center;
-	background-color: $black-opacity-50;
-	height: 65px;
 	position: relative;
-
-	@include respond-screen($bp-md-2) {
-		height: 120px;
-		top: -20px;
-	}
 
 	&::before,
 	&::after {
@@ -130,8 +125,6 @@
 
 		@include animationEaseInAll($transition-duration, null);
 	}
-
-	@include animationEaseInAll($transition-duration, null);
 }
 
 .logoDealerNameWrapper {
@@ -192,7 +185,6 @@
 
 .navigationBar {
 	position: relative;
-	top: -60px;
 	display: none;
 
 	@include respond-screen($bp-md-2) {
