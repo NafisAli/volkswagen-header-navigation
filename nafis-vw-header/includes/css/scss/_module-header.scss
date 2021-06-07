@@ -1,0 +1,58 @@
+.headerInformation {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	background-color: $black-opacity-50;
+	padding: 20px 0;
+
+	@include animationEaseInAll($transition-duration, null);
+
+	&:hover {
+		background-color: $white;
+
+		.dealerInformation {
+			color: $black;
+
+			&::after {
+				border-color: $black;
+			}
+		}
+
+		.addressBarText {
+			color: $black;
+		}
+
+		.brandDealership {
+			&::before,
+			&::after {
+				background-color: $black;
+			}
+		}
+
+		.logoDealerNameWrapper {
+			&::before,
+			&::after {
+				background-color: $black;
+			}
+		}
+
+		.brandLogo,
+		.iconLocation,
+		.iconPhone {
+			fill: $black;
+		}
+
+		.dealerName {
+			color: $black;
+		}
+
+		.navigationItemLink {
+			color: $black;
+
+			&::after {
+				border-color: $black;
+			}
+		}
+	}
+}
