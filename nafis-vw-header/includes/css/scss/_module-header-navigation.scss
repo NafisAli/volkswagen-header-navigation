@@ -40,4 +40,12 @@
 
 		@include transitionEaseIn(border-color, $transition-duration, null);
 	}
+
+	.headerInformation:hover & {
+		color: $black;
+
+		&::after {
+			border-color: $black;
+		}
+	}
 }

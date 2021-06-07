@@ -10,49 +10,5 @@
 
 	&:hover {
 		background-color: $white;
-
-		.dealerInformation {
-			color: $black;
-
-			&::after {
-				border-color: $black;
-			}
-		}
-
-		.addressBarText {
-			color: $black;
-		}
-
-		.brandDealership {
-			&::before,
-			&::after {
-				background-color: $black;
-			}
-		}
-
-		.logoDealerNameWrapper {
-			&::before,
-			&::after {
-				background-color: $black;
-			}
-		}
-
-		.brandLogo,
-		.iconLocation,
-		.iconPhone {
-			fill: $black;
-		}
-
-		.dealerName {
-			color: $black;
-		}
-
-		.navigationItemLink {
-			color: $black;
-
-			&::after {
-				border-color: $black;
-			}
-		}
 	}
 }

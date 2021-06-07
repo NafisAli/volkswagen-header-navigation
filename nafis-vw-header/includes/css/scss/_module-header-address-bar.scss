@@ -27,7 +27,15 @@
 			border-left: 2px solid $white;
 
 			@include transitionEaseInAll($transition-duration, null);
+
+			.headerInformation:hover & {
+				border-color: $black;
+			}
 		}
+	}
+
+	.headerInformation:hover & {
+		color: $black;
 	}
 }
 
@@ -41,6 +49,10 @@
 	text-decoration: none;
 
 	@include transitionEaseIn(color, $transition-duration, null);
+
+	.headerInformation:hover & {
+		color: $black;
+	}
 }
 
 .iconLocation,
@@ -50,4 +62,8 @@
 	width: 20px;
 
 	@include transitionEaseIn(fill, $transition-duration, null);
+
+	.headerInformation:hover & {
+		fill: $black;
+	}
 }

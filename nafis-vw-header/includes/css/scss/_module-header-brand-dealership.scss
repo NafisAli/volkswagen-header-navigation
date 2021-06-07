@@ -11,6 +11,10 @@
 		background-color: $white;
 
 		@include transitionEaseIn(background-color, $transition-duration, null);
+
+		.headerInformation:hover & {
+			background-color: $black;
+		}
 	}
 }
 
@@ -41,6 +45,13 @@
 
 		@include transitionEaseIn(background-color, $transition-duration, null);
 	}
+
+	.headerInformation:hover & {
+		&::before,
+		&::after {
+			background-color: $black;
+		}
+	}
 }
 
 .logoDealerNameLink {
@@ -56,6 +67,10 @@
 	fill: $white;
 
 	@include transitionEaseIn(fill, $transition-duration, null);
+
+	.headerInformation:hover & {
+		fill: $black;
+	}
 }
 
 .dealerName {
@@ -64,4 +79,8 @@
 	font-size: 20px;
 
 	@include transitionEaseIn(color, $transition-duration, null);
+
+	.headerInformation:hover & {
+		color: $black;
+	}
 }
