@@ -62,8 +62,8 @@
 }
 
 .brandLogo {
-	width: $logo-width;
-	height: $logo-height;
+	width: $brand-logo-size;
+	height: $brand-logo-size;
 	fill: $white;
 
 	@include transitionEaseIn(fill, $transition-duration, null);
