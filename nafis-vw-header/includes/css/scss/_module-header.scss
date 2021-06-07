@@ -6,7 +6,7 @@
 	background-color: $black-opacity-50;
 	padding: 20px 0;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseIn(background-color, $transition-duration, null);
 
 	&:hover {
 		background-color: $white;

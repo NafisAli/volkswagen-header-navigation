@@ -27,7 +27,7 @@
 	font-size: 15px;
 	text-decoration: none;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseIn(color, $transition-duration, null);
 
 	&::after {
 		content: "";
@@ -38,6 +38,6 @@
 		border-color: $white;
 		transform: rotate(45deg);
 
-		@include animationEaseInAll($transition-duration, null);
+		@include transitionEaseIn(border-color, $transition-duration, null);
 	}
 }

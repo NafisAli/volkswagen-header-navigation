@@ -10,7 +10,7 @@
 		width: 100%;
 		background-color: $white;
 
-		@include animationEaseInAll($transition-duration, null);
+		@include transitionEaseIn(background-color, $transition-duration, null);
 	}
 }
 
@@ -19,8 +19,6 @@
 	align-items: center;
 	gap: 20px;
 	min-width: 100vw;
-
-	@include animationEaseInAll($transition-duration, null);
 
 	@include respond-screen($bp-md) {
 		min-width: $container-width;
@@ -32,7 +30,7 @@
 		width: 5%;
 		background-color: $white;
 
-		@include animationEaseInAll($transition-duration, null);
+		@include transitionEaseIn(background-color, $transition-duration, null);
 	}
 
 	&::after {
@@ -41,7 +39,7 @@
 		flex-grow: 1;
 		background-color: $white;
 
-		@include animationEaseInAll($transition-duration, null);
+		@include transitionEaseIn(background-color, $transition-duration, null);
 	}
 }
 
@@ -50,8 +48,6 @@
 	align-items: center;
 	gap: 20px;
 	text-decoration: none;
-
-	@include animationEaseInAll($transition-duration, null);
 }
 
 .brandLogo {
@@ -59,7 +55,7 @@
 	height: $logo-height;
 	fill: $white;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseIn(fill, $transition-duration, null);
 }
 
 .dealerName {
@@ -67,5 +63,5 @@
 	color: $white;
 	font-size: 20px;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseIn(color, $transition-duration, null);
 }

@@ -12,7 +12,7 @@
 	justify-content: flex-end;
 	gap: 10px;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseInAll($transition-duration, null);
 }
 
 .dealerInformation {
@@ -26,7 +26,7 @@
 			height: 100%;
 			border-left: 2px solid $white;
 
-			@include animationEaseInAll($transition-duration, null);
+			@include transitionEaseInAll($transition-duration, null);
 		}
 	}
 }
@@ -40,7 +40,7 @@
 	color: $white;
 	text-decoration: none;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseIn(color, $transition-duration, null);
 }
 
 .iconLocation,
@@ -49,5 +49,5 @@
 	height: 20px;
 	width: 20px;
 
-	@include animationEaseInAll($transition-duration, null);
+	@include transitionEaseIn(fill, $transition-duration, null);
 }
