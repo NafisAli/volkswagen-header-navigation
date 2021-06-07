@@ -1,3 +1,17 @@
+@mixin animationEaseIn($property, $duration, $delay) {
+	transition-property: $property;
+
+	@if $duration {
+		transition-duration: $duration;
+	}
+
+	transition-timing-function: ease-in;
+
+	@if $delay {
+		transition-delay: $delay;
+	}
+}
+
 @mixin animationEaseInAll($duration, $delay) {
 	transition-property: all;
 
