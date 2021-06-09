@@ -11,8 +11,6 @@
 	display: flex;
 	justify-content: flex-end;
 	gap: 10px;
-
-	@include transitionEaseInAll($transition-duration, null);
 }
 
 .dealerInformation {
@@ -25,8 +23,7 @@
 			content: "";
 			height: 100%;
 			border-left: 2px solid $white;
-
-			@include transitionEaseInAll($transition-duration, null);
+			transition: border-left $transition-duration ease-in;
 
 			.headerInformation:hover & {
 				border-color: $black;
@@ -47,8 +44,7 @@
 	font-size: 13px;
 	color: $white;
 	text-decoration: none;
-
-	@include transitionEaseIn(color, $transition-duration, null);
+	transition: color $transition-duration ease-in;
 
 	.headerInformation:hover & {
 		color: $black;
@@ -60,8 +56,7 @@
 	fill: $white;
 	height: 20px;
 	width: 20px;
-
-	@include transitionEaseIn(fill, $transition-duration, null);
+	transition: fill $transition-duration ease-in;
 
 	.headerInformation:hover & {
 		fill: $black;

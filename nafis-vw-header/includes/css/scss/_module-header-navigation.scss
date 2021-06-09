@@ -26,8 +26,7 @@
 	color: $white;
 	font-size: 15px;
 	text-decoration: none;
-
-	@include transitionEaseIn(color, $transition-duration, null);
+	transition: color $transition-duration ease-in;
 
 	&::after {
 		content: "";
@@ -37,8 +36,7 @@
 		border-bottom: 2px solid;
 		border-color: $white;
 		transform: rotate(45deg);
-
-		@include transitionEaseIn(border-color, $transition-duration, null);
+		transition: border-color $transition-duration ease-in;
 	}
 
 	.headerInformation:hover & {

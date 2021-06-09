@@ -5,11 +5,10 @@
 @import "external-fonts";
 @import "mixins-fonts";
 @import "mixins-media-queries";
-@import "mixins-animations";
 
 //base
-@import "layout";
 @import "box-layout";
+@import "layout";
 @import "pages";
 
 //modules nav
