@@ -1,13 +1,18 @@
-//base
+//variables
 @import "variables";
-@import "layout";
-
-
 
 //mixins and functions
-@import "functions";
-@import "animations";
+@import "external-fonts";
 @import "mixins-fonts";
+@import "mixins-media-queries";
 
-//modules
+//base
+@import "box-layout";
+@import "container";
+@import "layout";
+
+//modules nav
+@import "module-header";
+@import "module-header-address-bar";
+@import "module-header-brand-dealership";
 @import "module-header-navigation";

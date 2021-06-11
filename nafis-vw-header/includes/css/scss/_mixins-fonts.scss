@@ -1,3 +1,19 @@
+@mixin primaryFontStackLight {
+	font-family: "VWHeadLight", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+@mixin primaryFontStackBold {
+	font-family: "VWHeadBold", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
 @mixin primaryFontStack {
-	font-family: Helvetica;
+	font-family: "VWTextRegular", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+@mixin primaryFontStackConBold {
+	font-family: "VWTextBold", Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
