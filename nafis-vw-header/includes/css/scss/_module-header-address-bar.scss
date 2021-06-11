@@ -25,13 +25,13 @@
 			border-left: 2px solid $white;
 			transition: border-left $transition-duration ease-in;
 
-			.headerInformation:hover & {
+			.headerContentWrapper:hover & {
 				border-color: $black;
 			}
 		}
 	}
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		color: $black;
 	}
 }
@@ -46,7 +46,7 @@
 	text-decoration: none;
 	transition: color $transition-duration ease-in;
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		color: $black;
 	}
 }
@@ -58,7 +58,7 @@
 	width: 20px;
 	transition: fill $transition-duration ease-in;
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		fill: $black;
 	}
 }

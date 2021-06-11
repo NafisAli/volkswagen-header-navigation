@@ -39,7 +39,7 @@
 		transition: border-color $transition-duration ease-in;
 	}
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		color: $black;
 
 		&::after {

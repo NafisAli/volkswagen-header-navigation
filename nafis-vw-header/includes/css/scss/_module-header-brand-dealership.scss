@@ -11,7 +11,7 @@
 		background-color: $white;
 		transition: background-color $transition-duration ease-in;
 
-		.headerInformation:hover & {
+		.headerContentWrapper:hover & {
 			background-color: $black;
 		}
 	}
@@ -43,7 +43,7 @@
 		transition: background-color $transition-duration ease-in;
 	}
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		&::before,
 		&::after {
 			background-color: $black;
@@ -64,7 +64,7 @@
 	fill: $white;
 	transition: fill $transition-duration ease-in;
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		fill: $black;
 	}
 }
@@ -75,7 +75,7 @@
 	font-size: 20px;
 	transition: color $transition-duration ease-in;
 
-	.headerInformation:hover & {
+	.headerContentWrapper:hover & {
 		color: $black;
 	}
 }
