@@ -1,4 +1,4 @@
-.navigationBar {
+.navigationBarWrapper {
 	position: relative;
 	display: none;
 
@@ -7,13 +7,9 @@
 	}
 }
 
-.navigationMenuWrapper {
-	display: flex;
-	justify-content: flex-end;
-}
-
 .navigationItemList {
 	display: flex;
+	justify-content: flex-end;
 	gap: 20px;
 	list-style: none;
 }
