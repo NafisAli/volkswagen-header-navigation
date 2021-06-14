@@ -1,6 +1,5 @@
 .brandLogoDealerNameWrapper {
 	display: grid;
-	width: 100%;
 	grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
 	align-items: center;
 
