@@ -1,0 +1,60 @@
+.brandLogoDealerNameWrapper {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
+	align-items: center;
+
+	&::before,
+	&::after {
+		content: "";
+		border-top: 2px solid $white;
+
+		.headerWrapper:hover & {
+			border-top: 2px solid $black;
+		}
+	}
+}
+
+.brandLogoDealerName {
+	display: grid;
+	grid-template-columns: 1fr auto 10fr;
+	grid-gap: 15px;
+	align-items: center;
+
+	&::before,
+	&::after {
+		content: "";
+		border-top: 2px solid $white;
+
+		.headerWrapper:hover & {
+			border-top: 2px solid $black;
+		}
+	}
+}
+
+.logoNameLink {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.brandLogoSvg {
+	width: 48px;
+	height: 48px;
+	fill: $white;
+
+	.headerWrapper:hover & {
+		fill: $black;
+	}
+}
+
+.dealerName {
+	@include primaryFontStackBold;
+	font-size: 20px;
+	color: $white;
+	padding-left: 10px;
+
+	.headerWrapper:hover & {
+		color: $black;
+	}
+}
