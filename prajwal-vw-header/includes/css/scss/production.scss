@@ -1,12 +1,12 @@
 //base
-@import "variables";
 @import "layout";
 @import "mixins-fonts";
 @import "mixin-media-queries";
+@import "variables";
 
 //base custom
-@import "container";
 @import "box-layout";
+@import "container";
 
 //modules
 @import "external-fonts";
