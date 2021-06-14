@@ -33,7 +33,7 @@
 			}
 		}
 
-		.brandLogoDealerNameLink {
+		.brandLogoDealerName {
 			&::before,
 			&::after {
 				border-top: 2px solid $black;
@@ -124,23 +124,23 @@
 	border-top: 2px solid $white;
 }
 
-.brandLogoDealerNameLink {
+.brandLogoDealerName {
 	display: grid;
 	grid-template-columns: 1fr auto 10fr;
 	grid-gap: 15px;
 	align-items: center;
-	text-decoration: none;
 }
 
-.brandLogoDealerNameLink::before,
-.brandLogoDealerNameLink::after {
+.brandLogoDealerName::before,
+.brandLogoDealerName::after {
 	content: "";
 	border-top: 2px solid $white;
 }
 
-.logoName {
+.logoNameLink {
 	display: flex;
 	align-items: center;
+	text-decoration: none;
 }
 
 .brandLogoSvg {
