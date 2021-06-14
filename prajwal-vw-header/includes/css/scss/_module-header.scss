@@ -13,7 +13,7 @@
 			border-top: 2px solid $black;
 		}
 
-		.addressBarDealerInformation,
+		.addressBar,
 		.dealerAddress,
 		.dealerPhoneNumber,
 		.dealerName,
@@ -45,7 +45,7 @@
 .headerNavWrapper {
 	display: flex;
 	flex-direction: column;
-	padding: 15px 0;
+	padding: 20px 0;
 }
 
 .addressBarWrapper {
@@ -56,7 +56,7 @@
 	}
 }
 
-.addressBarDealerInformation {
+.addressBar {
 	display: flex;
 	justify-content: flex-end;
 	color: $white;
@@ -160,21 +160,21 @@
 	display: none;
 
 	@include respond-screen($bp-md) {
-		display: flex;
-		justify-content: flex-end;
+		display: block;
 	}
 }
 
 .navPrimaryList {
 	display: flex;
 	margin: 0;
+	justify-content: flex-end;
 }
 
 .navPrimaryItem {
 	@include primaryFontStack;
 	list-style-type: none;
 	color: $white;
-	font-size: 13px;
+	font-size: 15px;
 	padding-right: 25px;
 
 	&:last-child {
@@ -183,8 +183,8 @@
 }
 
 .icon-svg-nav-arrow {
-	width: 10px;
-	height: 10px;
+	width: 12px;
+	height: 12px;
 	transform: rotate(270deg);
 	fill: $white;
 	top: 3px;
