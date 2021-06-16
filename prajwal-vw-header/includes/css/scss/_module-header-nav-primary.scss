@@ -18,6 +18,7 @@
 	color: $white;
 	font-size: 18px;
 	padding-right: 25px;
+	transition: color $transition-duration ease-in-out;
 
 	&:last-child {
 		padding-right: 0;
