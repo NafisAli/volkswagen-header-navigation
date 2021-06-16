@@ -76,6 +76,4 @@ typings/
 .fusebox/
 includes/.DS_Store
 volkswagen/.DS_Store
-prajwal-vw-header/includes/.DS_Store
-prajwal-vw-header/.DS_Store
-.DS_Store
+**/.DS_Store
