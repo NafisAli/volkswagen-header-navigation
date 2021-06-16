@@ -1,0 +1,77 @@
+.addressBarWrapper {
+	display: none;
+
+	@include respond-screen($bp-md) {
+		display: block;
+	}
+}
+
+.dealerInformationWrapper {
+	display: flex;
+	justify-content: flex-end;
+	color: $white;
+
+	.headerWrapper:hover & {
+		color: $black;
+	}
+}
+
+.dealerItemWrapper {
+	display: flex;
+	padding-right: 20px;
+	align-items: center;
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.dealerItemLink {
+	@include primaryFontStack;
+	padding-right: 10px;
+	font-size: 13px;
+	text-decoration: none;
+	color: $white;
+	transition: color $transition-duration ease-in-out;
+
+	.headerWrapper:hover & {
+		color: $black;
+	}
+}
+
+.icon-svg {
+	position: relative;
+	fill: $white;
+	transition: fill $transition-duration ease-in-out;
+
+	.headerWrapper:hover & {
+		fill: $black;
+	}
+}
+
+.icon-svg-location {
+	height: 16px;
+	width: 16px;
+	top: 3px;
+	margin-right: 5px;
+}
+
+.dealerItemPhone {
+	@include primaryFontStack;
+	font-size: 13px;
+	text-decoration: none;
+	color: $white;
+	transition: color $transition-duration ease-in-out;
+
+	.headerWrapper:hover & {
+		color: $black;
+	}
+}
+
+.icon-svg-phone {
+	height: 16px;
+	width: 16px;
+	top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
