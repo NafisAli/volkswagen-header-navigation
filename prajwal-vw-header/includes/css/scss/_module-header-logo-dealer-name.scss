@@ -6,10 +6,10 @@
 	&::before,
 	&::after {
 		content: "";
-		border-top: 2px solid $white;
+		border-top: $brandLineWidth solid $white;
 
 		.headerWrapper:hover & {
-			border-top: 2px solid $black;
+			border-top: $brandLineWidth solid $black;
 		}
 	}
 }
@@ -23,10 +23,10 @@
 	&::before,
 	&::after {
 		content: "";
-		border-top: 2px solid $white;
+		border-top: $brandLineWidth solid $white;
 
 		.headerWrapper:hover & {
-			border-top: 2px solid $black;
+			border-top: $brandLineWidth solid $black;
 		}
 	}
 }
