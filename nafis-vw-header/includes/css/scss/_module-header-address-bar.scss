@@ -9,13 +9,19 @@
 .addressBar {
 	display: flex;
 	justify-content: flex-end;
-	gap: 10px;
+
+	@supports (grid-area: auto) {
+		gap: 10px;
+	}
 }
 
 .dealerInformation {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+
+	@supports (grid-area: auto) {
+		gap: 10px;
+	}
 
 	&:not(:last-child) {
 		&::after {
@@ -23,6 +29,11 @@
 			height: 100%;
 			border-left: 2px solid $white;
 			transition: border-left $transition-duration ease-in;
+			margin-right: 10px;
+
+			@supports (grid-area: auto) {
+				margin-right: 0;
+			}
 
 			.headerContentWrapper:hover & {
 				border-color: $black;
@@ -38,12 +49,17 @@
 .addressBarText {
 	display: flex;
 	align-items: center;
-	gap: 5px;
 	@include primaryFontStack;
 	font-size: 13px;
 	color: $white;
 	text-decoration: none;
 	transition: color $transition-duration ease-in;
+	margin-right: 10px;
+
+	@supports (grid-area: auto) {
+		gap: 5px;
+		margin-right: 0;
+	}
 
 	.headerContentWrapper:hover & {
 		color: $black;
@@ -56,6 +72,11 @@
 	height: 20px;
 	width: 20px;
 	transition: fill $transition-duration ease-in;
+	margin-right: 5px;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
 
 	.headerContentWrapper:hover & {
 		fill: $black;
