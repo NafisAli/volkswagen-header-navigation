@@ -24,8 +24,11 @@
 .logoDealerNameWrapper {
 	display: flex;
 	align-items: center;
-	gap: 20px;
 	width: 100vw;
+
+	@supports (grid-area: auto) {
+		gap: $gap-size;
+	}
 
 	@include respond-screen($bp-xl-2) {
 		width: $container-width;
@@ -37,6 +40,11 @@
 		width: 3%;
 		background-color: $white;
 		transition: background-color $transition-duration ease-in;
+		margin-right: $gap-size;
+
+		@supports (grid-area: auto) {
+			margin-right: 0;
+		}
 	}
 
 	&::after {
@@ -58,8 +66,13 @@
 .logoDealerNameLink {
 	display: flex;
 	align-items: center;
-	gap: 20px;
 	text-decoration: none;
+	margin-right: $gap-size;
+
+	@supports (grid-area: auto) {
+		gap: $gap-size;
+		margin-right: 0;
+	}
 }
 
 .brandLogo {
@@ -67,6 +80,11 @@
 	height: $brand-logo-size;
 	fill: $white;
 	transition: fill $transition-duration ease-in;
+	margin-right: $gap-size;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
 
 	.headerContentWrapper:hover & {
 		fill: $black;
