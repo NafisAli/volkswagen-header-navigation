@@ -2,6 +2,11 @@
 	display: flex;
 	align-items: center;
 
+	@supports (grid-area: auto) {
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
+	}
+
 	&::before,
 	&::after {
 		content: "";
