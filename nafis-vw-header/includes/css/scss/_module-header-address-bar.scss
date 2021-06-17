@@ -1,5 +1,4 @@
 .addressBarWrapper {
-	position: relative;
 	display: none;
 
 	@include respond-screen($bp-md-2) {
