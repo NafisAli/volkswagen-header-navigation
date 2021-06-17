@@ -1,0 +1,31 @@
+@font-face {
+	font-family: "VWHeadLight";
+	src: url("#{$assets-path}/css/webfonts/VWHeadWeb-Light.eot");
+	src: url("#{$assets-path}/css/webfonts/VWHeadWeb-Light.eot?#iefix") format("embedded-opentype"), url("#{$assets-path}/css/webfonts/VWHeadWeb-Light.woff2") format("woff2"),
+		url("#{$assets-path}/css/webfonts/VWHeadWeb-Light.woff") format("woff"), url("#{$assets-path}/css/webfonts/VWHeadWeb-Light.ttf") format("truetype"),
+		url("#{$assets-path}/css/webfonts/VWHeadWeb-Light.svg#VWHeadWeb-Light.") format("svg");
+}
+
+@font-face {
+	font-family: "VWHeadBold";
+	src: url("#{$assets-path}/css/webfonts/VWHeadWeb-Bold.eot");
+	src: url("#{$assets-path}/css/webfonts/VWHeadWeb-Bold.eot?#iefix") format("embedded-opentype"), url("#{$assets-path}/css/webfonts/VWHeadWeb-Bold.woff2") format("woff2"),
+		url("#{$assets-path}/css/webfonts/VWHeadWeb-Bold.woff") format("woff"), url("#{$assets-path}/css/webfonts/VWHeadWeb-Bold.ttf") format("truetype"),
+		url("#{$assets-path}/css/webfonts/VWHeadWeb-Bold.svg#VWHeadWeb-Bold.") format("svg");
+}
+
+@font-face {
+	font-family: "VWTextRegular";
+	src: url("#{$assets-path}/css/webfonts/VWTextWeb-Regular.eot");
+	src: url("#{$assets-path}/css/webfonts/VWTextWeb-Regular.eot?#iefix") format("embedded-opentype"), url("#{$assets-path}/css/webfonts/VWTextWeb-Regular.woff2") format("woff2"),
+		url("#{$assets-path}/css/webfonts/VWTextWeb-Regular.woff") format("woff"), url("#{$assets-path}/css/webfonts/VWTextWeb-Regular.ttf") format("truetype"),
+		url("#{$assets-path}/css/webfonts/VWTextWeb-Regular.svg#VWTextWeb-Regular") format("svg");
+}
+
+@font-face {
+	font-family: "VWTextBold";
+	src: url("#{$assets-path}/css/webfonts/VWTextWeb-Bold.eot");
+	src: url("#{$assets-path}/css/webfonts/VWTextWeb-Bold.eot?#iefix") format("embedded-opentype"), url("#{$assets-path}/css/webfonts/VWTextWeb-Bold.woff2") format("woff2"),
+		url("#{$assets-path}/css/webfonts/VWTextWeb-Bold.woff") format("woff"), url("#{$assets-path}/css/webfonts/VWTextWeb-Bold.ttf") format("truetype"),
+		url("#{$assets-path}/css/webfonts/VWTextWeb-Bold.svg#VWTextWeb-Bold") format("svg");
+}

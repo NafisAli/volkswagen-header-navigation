@@ -1,0 +1,94 @@
+.addressBarWrapper {
+	display: none;
+
+	@include respond-screen($bp-md-2) {
+		display: block;
+	}
+}
+
+.addressBar {
+	display: flex;
+	justify-content: flex-end;
+
+	@supports (grid-area: auto) {
+		gap: 10px;
+	}
+}
+
+.dealerInformation {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+
+	@supports (grid-area: auto) {
+		gap: 10px;
+		margin-right: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:not(:last-child) {
+		&::after {
+			content: "";
+			height: 100%;
+			border-left: 2px solid $white;
+			transition: border-left $transition-duration ease-in;
+			margin-left: 10px;
+
+			@supports (grid-area: auto) {
+				margin-left: 0;
+			}
+
+			.headerContentWrapper:hover & {
+				border-color: $black;
+			}
+		}
+	}
+
+	.headerContentWrapper:hover & {
+		color: $black;
+	}
+}
+
+.addressBarLink {
+	display: flex;
+	align-items: center;
+	@include primaryFontStack;
+	font-size: 13px;
+	color: $white;
+	text-decoration: none;
+	transition: color $transition-duration ease-in;
+	margin-right: 10px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@supports (grid-area: auto) {
+		gap: 5px;
+		margin-right: 0;
+	}
+
+	.headerContentWrapper:hover & {
+		color: $black;
+	}
+}
+
+.iconLocation,
+.iconPhone {
+	fill: $white;
+	height: 20px;
+	width: 20px;
+	transition: fill $transition-duration ease-in;
+	margin-right: 5px;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
+
+	.headerContentWrapper:hover & {
+		fill: $black;
+	}
+}
