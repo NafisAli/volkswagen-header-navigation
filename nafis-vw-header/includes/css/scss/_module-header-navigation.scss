@@ -9,19 +9,38 @@
 .navigationItemList {
 	display: flex;
 	justify-content: flex-end;
-	gap: 20px;
 	list-style: none;
+
+	@supports (grid-area: auto) {
+		gap: 20px;
+	}
+}
+
+.navigationItem {
+	margin-right: 20px;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .navigationItemLink {
 	display: flex;
 	align-items: center;
-	gap: 8px;
 	@include primaryFontStack;
 	color: $white;
 	font-size: 15px;
 	text-decoration: none;
 	transition: color $transition-duration ease-in;
+
+	@supports (grid-area: auto) {
+		gap: 8px;
+		margin-right: 0;
+	}
 
 	&::after {
 		content: "";
@@ -32,6 +51,11 @@
 		border-color: $white;
 		transform: rotate(45deg);
 		transition: border-color $transition-duration ease-in;
+		margin-left: 8px;
+
+		@supports (grid-area: auto) {
+			margin-left: 0;
+		}
 	}
 
 	.headerContentWrapper:hover & {
