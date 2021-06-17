@@ -21,16 +21,16 @@
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	min-width: 100vw;
+	width: 100vw;
 
-	@include respond-screen($bp-lg-2) {
-		min-width: $container-width;
+	@include respond-screen($bp-xl-2) {
+		width: $container-width;
 	}
 
 	&::before {
 		content: "";
 		height: 2px;
-		width: 5%;
+		width: 3%;
 		background-color: $white;
 		transition: background-color $transition-duration ease-in;
 	}
