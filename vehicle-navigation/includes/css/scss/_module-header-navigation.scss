@@ -66,10 +66,19 @@
 	}
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 
 		&::after {
-			border-color: $black;
+			border-color: $primaryColor;
+		}
+	}
+
+	.navigationItem:hover & {
+		color: $primaryColorLight;
+		@include primaryFontStackConBold;
+
+		&::after {
+			border-color: $primaryColorLight;
 		}
 	}
 }

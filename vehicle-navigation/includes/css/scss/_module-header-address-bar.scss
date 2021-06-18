@@ -43,13 +43,13 @@
 			}
 
 			.headerContentWrapper:hover & {
-				border-color: $black;
+				border-color: $primaryColor;
 			}
 		}
 	}
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 	}
 }
 
@@ -73,7 +73,7 @@
 	}
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 	}
 }
 
@@ -90,6 +90,6 @@
 	}
 
 	.headerContentWrapper:hover & {
-		fill: $black;
+		fill: $primaryColor;
 	}
 }

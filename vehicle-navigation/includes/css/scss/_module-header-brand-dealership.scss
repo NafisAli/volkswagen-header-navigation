@@ -16,7 +16,7 @@
 		transition: background-color $transition-duration ease-in;
 
 		.headerContentWrapper:hover & {
-			background-color: $black;
+			background-color: $primaryColor;
 		}
 	}
 }
@@ -58,7 +58,7 @@
 	.headerContentWrapper:hover & {
 		&::before,
 		&::after {
-			background-color: $black;
+			background-color: $primaryColor;
 		}
 	}
 }
@@ -87,7 +87,7 @@
 	}
 
 	.headerContentWrapper:hover & {
-		fill: $black;
+		fill: $primaryColor;
 	}
 }
 
@@ -98,6 +98,6 @@
 	transition: color $transition-duration ease-in;
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 	}
 }

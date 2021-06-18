@@ -42,10 +42,15 @@
 .categoryNameText {
 	@include primaryFontStack;
 	color: $white;
-	background-color: $black;
+	background-color: $primaryColor;
 	padding: 10px 20px;
 	margin-bottom: 10px;
 	border-radius: 50px;
+	transition: background-color $transition-duration ease-in;
+
+	.modelCategoryItem:hover & {
+		background-color: $primaryColorLight;
+	}
 }
 
 .modelListWrapper {
