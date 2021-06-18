@@ -1,5 +1,6 @@
 .addressBarWrapper {
 	display: none;
+	padding-top: 20px;
 
 	@include respond-screen($bp-md-2) {
 		display: block;
