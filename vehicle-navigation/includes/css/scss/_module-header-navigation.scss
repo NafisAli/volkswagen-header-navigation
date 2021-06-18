@@ -26,6 +26,12 @@
 	&:last-child {
 		margin-right: 0;
 	}
+
+	&:hover {
+		.vehicleNav {
+			opacity: 1;
+		}
+	}
 }
 
 .navigationItemLink {
@@ -36,6 +42,7 @@
 	font-size: 15px;
 	text-decoration: none;
 	transition: color $transition-duration ease-in;
+	padding-bottom: 20px;
 
 	@supports (grid-area: auto) {
 		gap: 8px;
@@ -65,4 +72,94 @@
 			border-color: $black;
 		}
 	}
+}
+
+.navSecondary {
+	visibility: hidden;
+	position: absolute;
+	transition: opacity $transition-duration ease-in;
+
+	.navigationItem:hover & {
+		visibility: visible;
+	}
+}
+
+.vehicleNav {
+	width: 100%;
+	top: 100%;
+	left: 0;
+	padding: 20px 0;
+	color: $black;
+	background-color: $white;
+	opacity: 0;
+	transition: opacity $transition-duration ease-in;
+
+	.navigationItem:hover & {
+		opacity: 1;
+	}
+}
+
+.modelCategoryList {
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	padding-bottom: 10px;
+
+	@supports (grid-area: auto) {
+		gap: 20px;
+	}
+}
+
+.modelCategoryItem {
+	margin-right: 20px;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
+
+	&::last-child {
+		margin-right: 0;
+	}
+}
+
+.modelCategoryItemLink {
+	@include primaryFontStack;
+	color: $white;
+	background-color: $black;
+	padding: 10px 20px;
+	border-radius: 50px;
+	text-decoration: none;
+}
+
+.modelListWrapper {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	visibility: hidden;
+	background-color: $white;
+	transition: opacity $transition-duration ease-in;
+
+	.modelCategoryItem:hover & {
+		visibility: visible;
+		opacity: 1;
+	}
+
+}
+
+.modelList {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.modelItem {
+	width: 25%;
+}
+
+.modelLink {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
