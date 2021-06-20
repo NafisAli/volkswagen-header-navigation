@@ -64,6 +64,7 @@
 	visibility: hidden;
 	background-color: $black5;
 	transition: opacity $transition-duration ease-in;
+	padding: 10px 0;
 
 	.modelCategoryItem:hover & {
 		visibility: visible;
