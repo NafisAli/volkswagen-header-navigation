@@ -73,6 +73,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
+
+	@supports (grid-area: auto) {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 .modelItem {
