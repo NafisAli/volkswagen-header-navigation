@@ -82,6 +82,10 @@
 
 .modelItem {
 	width: 25%;
+
+	@supports (grid-area: auto) {
+		width: auto;
+	}
 }
 
 .modelLink {
