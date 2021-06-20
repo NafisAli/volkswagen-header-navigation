@@ -18,6 +18,8 @@
 
 .navigationItem {
 	margin-right: 20px;
+	display: flex;
+	justify-content: flex-end;
 
 	@supports (grid-area: auto) {
 		margin-right: 0;
@@ -25,6 +27,16 @@
 
 	&:last-child {
 		margin-right: 0;
+	}
+
+	&:hover {
+		.vehicleNav {
+			opacity: 1;
+		}
+
+		&:first-child {
+			flex-grow: 1;
+		}
 	}
 }
 
@@ -36,6 +48,7 @@
 	font-size: 15px;
 	text-decoration: none;
 	transition: color $transition-duration ease-in;
+	padding-bottom: 20px;
 
 	@supports (grid-area: auto) {
 		gap: 8px;
@@ -50,19 +63,41 @@
 		border-bottom: 2px solid;
 		border-color: $white;
 		transform: rotate(45deg);
-		transition: border-color $transition-duration ease-in;
+		transition: border-color $transition-duration ease-in, transform $transition-duration ease-in;
 		margin-left: 8px;
 
 		@supports (grid-area: auto) {
 			margin-left: 0;
 		}
+
+		.navigationItem:hover & {
+			transform: scaleY(-1) rotate(45deg);
+		}
 	}
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 
 		&::after {
-			border-color: $black;
+			border-color: $primaryColor;
 		}
+	}
+
+	.navigationItem:hover & {
+		color: $primaryColorLight;
+
+		&::after {
+			border-color: $primaryColorLight;
+		}
+	}
+}
+
+.navSecondary {
+	visibility: hidden;
+	position: absolute;
+	transition: opacity $transition-duration ease-in;
+
+	.navigationItem:hover & {
+		visibility: visible;
 	}
 }

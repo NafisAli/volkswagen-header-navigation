@@ -1,5 +1,6 @@
 .addressBarWrapper {
 	display: none;
+	padding-top: 20px;
 
 	@include respond-screen($bp-md-2) {
 		display: block;
@@ -42,13 +43,13 @@
 			}
 
 			.headerContentWrapper:hover & {
-				border-color: $black;
+				border-color: $primaryColor;
 			}
 		}
 	}
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 	}
 }
 
@@ -72,7 +73,7 @@
 	}
 
 	.headerContentWrapper:hover & {
-		color: $black;
+		color: $primaryColor;
 	}
 }
 
@@ -89,6 +90,6 @@
 	}
 
 	.headerContentWrapper:hover & {
-		fill: $black;
+		fill: $primaryColor;
 	}
 }
