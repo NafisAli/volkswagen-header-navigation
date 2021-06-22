@@ -1,0 +1,98 @@
+.navVehicle {
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: $black5;
+	opacity: 0;
+	transition: opacity $transition-duration ease-in;
+
+	.navigationItem:hover & {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.nav-vehicle-list {
+	list-style: none;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+	@supports (grid-area: auto) {
+		gap: 10px;
+	}
+}
+
+.nv-item {
+	min-width: 10%;
+	width: auto;
+	padding: 10px 0;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.nv-link {
+	display: block;
+	@include primaryFontStackConBold;
+	font-size: 14px;
+	line-height: 16px;
+	text-decoration: none;
+	text-align: center;
+	color: $white;
+	background-color: $primaryColor;
+	border-radius: 60px;
+	transition: background $transition-duration ease-in;
+	padding: 15px 18px;
+
+	&:hover {
+		background-color: $primaryColorLight;
+	}
+}
+
+.nav-tertiary {
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	padding: 10px 0;
+	background-color: $black5;
+	opacity: 0;
+	transition: opacity $transition-duration ease-in;
+
+	.nv-category:hover & {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.details {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nv-model-wrapper {
+	width: 25%;
+	text-align: center;
+	transition: transform 0.3s ease-in;
+	transform: scale(1);
+
+	&:hover {
+		transform: scale(1.04);
+	}
+}
+
+.nv-model-link {
+	@include primaryFontStackConBold;
+	text-decoration: none;
+	width: 100%;
+	color: $primaryColor;
+}
