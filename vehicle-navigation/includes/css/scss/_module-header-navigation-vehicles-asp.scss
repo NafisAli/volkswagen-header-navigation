@@ -19,23 +19,16 @@
 	display: flex;
 	width: 100%;
 	justify-content: center;
-
-	@supports (grid-area: auto) {
-		gap: 10px;
-	}
 }
 
-.nv-item {
+.nv-category {
 	min-width: 10%;
 	width: auto;
 	padding: 10px 0;
-
-	@supports (grid-area: auto) {
-		margin-right: 0;
-	}
+	padding-right: 10px;
 
 	&:last-child {
-		margin-right: 0;
+		padding-right: 0;
 	}
 }
 
@@ -57,7 +50,7 @@
 	}
 }
 
-.nav-tertiary {
+.vehicleCategoryItems {
 	visibility: hidden;
 	position: absolute;
 	top: 100%;
