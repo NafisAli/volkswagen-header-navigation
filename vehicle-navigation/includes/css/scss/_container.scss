@@ -1,8 +1,4 @@
 .container {
 	max-width: $container-width;
-	margin: 0;
-
-	@include respond-screen($bp-xl-2) {
-		margin: 0 auto;
-	}
+	margin: 0 auto;
 }
