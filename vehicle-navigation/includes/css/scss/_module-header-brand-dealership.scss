@@ -24,7 +24,7 @@
 .logoDealerNameWrapper {
 	display: flex;
 	align-items: center;
-	width: 100vw;
+	width: 100%;
 
 	@supports (grid-area: auto) {
 		gap: $gap-size;
