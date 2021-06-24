@@ -41,7 +41,7 @@
 		margin-right: $gap-size;
 
 		@include respond-screen($bp-xl-2) {
-			width: calc((100vw - #{$container-width}) / 2);
+			width: calc((100% - #{$container-width}) / 2);
 		}
 
 		@supports (grid-area: auto) {
