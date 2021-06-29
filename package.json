@@ -5,7 +5,6 @@
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "clean-css-cli": "^5.3.0",
-    "concat": "^1.0.3",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -14,7 +13,6 @@
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.3.2",
-    "sane": "^5.0.1",
     "sass-lint": "^1.13.1"
   },
   "scripts": {
@@ -36,14 +34,7 @@
     "build-win:sass:all": "yarn build-win:sass:development && yarn build-win:sass:production",
     "watch-win:sass": "yarn nodemon -e scss,sass -x \"yarn lint-win:sass & yarn build-win:sass:all\"",
     "lint:js": "echo 'ESLinting...' && yarn eslint $INIT_CWD/includes/js/modules/*.js",
-    "lint-win:js": "echo 'ESLinting...' && yarn eslint %INIT_CWD%/includes/js/modules/*.js",
-    "concatenate:js": "echo 'Concatenating...' && yarn concat -o $INIT_CWD/includes/js/volkswagen.js $INIT_CWD/includes/js/lib/jquery-3.6.0.js $INIT_CWD/includes/js/lib/jquery-ui-1.12.4.js $INIT_CWD/includes/js/modules/*.js",
-    "concatenate-win:js": "echo 'Concatenating...' && yarn concat -o %INIT_CWD%/includes/js/volkswagen.js %INIT_CWD%/includes/js/lib/jquery-3.6.0.js %INIT_CWD%/includes/js/lib/jquery-ui-1.12.4.js %INIT_CWD%/includes/js/modules/%%.js",
-    "build:js": "echo 'Building `volkswagen.js`...' && yarn lint:js && yarn concatenate:js",
-    "build-win:js": "echo 'Building `volkswagen.js`...' && yarn lint-win:js && yarn concatenate-win:js",
-    "success:js": "echo 'Successfully compiled volkswagen.js'",
-    "watch:js": "yarn sane 'yarn build:js && yarn success:js' $INIT_CWD/includes/js/modules",
-    "watch-win:js": "yarn sane 'yarn build-win:js && yarn success:js' %INIT_CWD%/includes/js/modules"
+    "lint-win:js": "echo 'ESLinting...' && yarn eslint %INIT_CWD%/includes/js/modules/*.js"
   },
   "sasslintconfig": ".sasslintrc"
 }
