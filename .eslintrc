@@ -1,0 +1,15 @@
+{
+	"extends": "eslint:recommended",
+	"env": {
+		"browser": true,
+		"jquery": true,
+		"es6": true
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"semi": ["error", "always"],
+		"no-unused-vars": ["error", { "vars": "local" }],
+		"no-console": ["error", { "allow": ["log"] }],
+		"prettier/prettier": "error"
+	}
+}
