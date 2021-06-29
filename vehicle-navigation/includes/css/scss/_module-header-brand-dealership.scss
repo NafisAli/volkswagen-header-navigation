@@ -1,0 +1,106 @@
+.brandDealershipWrapper {
+	display: flex;
+	align-items: center;
+
+	@supports (grid-area: auto) {
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
+	}
+
+	@supports (grid-area: auto) {
+		&::before,
+		&::after {
+			content: "";
+			height: 2px;
+			background-color: $white;
+			transition: background-color $transition-duration ease-in;
+
+			.headerContentWrapper:hover & {
+				background-color: $primaryColor;
+			}
+		}
+	}
+}
+
+.logoDealerNameWrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+
+	@supports (grid-area: auto) {
+		width: auto;
+		gap: $gap-size;
+	}
+
+	&::before {
+		content: "";
+		height: 2px;
+		width: 3%;
+		background-color: $white;
+		transition: background-color $transition-duration ease-in;
+		margin-right: $gap-size;
+
+		@include respond-screen($bp-xl-2) {
+			width: calc((100% - #{$container-width}) / 2);
+		}
+
+		@supports (grid-area: auto) {
+			width: 3%;
+			margin-right: 0;
+		}
+	}
+
+	&::after {
+		content: "";
+		height: 2px;
+		flex-grow: 1;
+		background-color: $white;
+		transition: background-color $transition-duration ease-in;
+	}
+
+	.headerContentWrapper:hover & {
+		&::before,
+		&::after {
+			background-color: $primaryColor;
+		}
+	}
+}
+
+.logoDealerNameLink {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	margin-right: $gap-size;
+
+	@supports (grid-area: auto) {
+		gap: $gap-size;
+		margin-right: 0;
+	}
+}
+
+.brandLogo {
+	width: $brand-logo-size;
+	height: $brand-logo-size;
+	fill: $white;
+	transition: fill $transition-duration ease-in;
+	margin-right: $gap-size;
+
+	@supports (grid-area: auto) {
+		margin-right: 0;
+	}
+
+	.headerContentWrapper:hover & {
+		fill: $primaryColor;
+	}
+}
+
+.dealerNameText {
+	@include primaryFontStackBold;
+	color: $white;
+	font-size: 20px;
+	transition: color $transition-duration ease-in;
+
+	.headerContentWrapper:hover & {
+		color: $primaryColor;
+	}
+}

@@ -115,6 +115,7 @@
 
 .buttonGroup {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 10px;
 }
@@ -126,16 +127,16 @@
 	text-decoration: none;
 	text-align: center;
 	background-color: $white;
-	min-width: 50%;
+	min-width: 100%;
 	padding: 10px 20px;
 	border-radius: 80px;
+	transition: background-color 250ms ease-in;
 
 	@include respond-screen($bp-md) {
 		min-width: 20%;
 		padding: 10px 40px;
 	}
 
-	@include animationEaseInAll(250ms, null);
 
 	&:hover {
 		background-color: $secondaryColor;

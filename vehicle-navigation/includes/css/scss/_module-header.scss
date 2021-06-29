@@ -1,0 +1,17 @@
+.headerContentWrapper {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	padding: 20px 0;
+	background-color: $black-opacity-50;
+	transition: background-color $transition-duration ease-in;
+
+	&:hover {
+		background-color: $white;
+	}
+
+	@include respond-screen($bp-md-2) {
+		padding: 0;
+	}
+}
