@@ -1,3 +1,0 @@
-$(document).ready(() => {
-  "use strict";
-});
