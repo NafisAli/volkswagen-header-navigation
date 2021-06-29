@@ -5,6 +5,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "clean-css-cli": "^5.3.0",
+    "eslint": "^7.29.0",
     "live-server": "^1.2.1",
     "nodemon": "^2.0.7",
     "postcss": "^8.3.0",
@@ -28,7 +29,9 @@
     "build-win:sass:development": "yarn lint-win:sass && yarn node-sass %INIT_CWD%/includes/css/scss/development.scss --output %INIT_CWD%/includes/css/ --source-map-embed --source-map-contents && yarn run prefix-win:sass",
     "build-win:sass:production": "yarn node-sass %INIT_CWD%/includes/css/scss/production.scss --output %INIT_CWD%/includes/css/ && yarn run prefix-win:sass:production && yarn minify-win:sass",
     "build-win:sass:all": "yarn build-win:sass:development && yarn build-win:sass:production",
-    "watch-win:sass": "yarn nodemon -e scss,sass -x \"yarn lint-win:sass & yarn build-win:sass:all\""
+    "watch-win:sass": "yarn nodemon -e scss,sass -x \"yarn lint-win:sass & yarn build-win:sass:all\"",
+    "lint:js": "echo 'ESLinting...' && yarn eslint $INIT_CWD/includes/js/imotor/*.js",
+    "lint-win:js": "echo 'ESLinting...' && yarn eslint %INIT_CWD%/includes/js/*.js"
   },
   "sasslintconfig": ".sasslintrc"
 }
