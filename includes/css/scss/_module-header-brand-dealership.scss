@@ -22,16 +22,7 @@
 
 		&::before,
 		&::after {
-			content: "";
-			height: 2px;
 			width: auto;
-
-			background-color: $white;
-			transition: background-color $transition-duration ease-in;
-
-			.headerContentWrapper:hover & {
-				background-color: $primaryColor;
-			}
 		}
 	}
 }
