@@ -5,9 +5,7 @@
 	@supports (grid-area: auto) {
 		display: grid;
 		grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
-	}
 
-	@supports (grid-area: auto) {
 		&::before,
 		&::after {
 			content: "";
