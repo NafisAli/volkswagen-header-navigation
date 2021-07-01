@@ -28,7 +28,7 @@
 		width: 3%;
 		background-color: $white;
 		transition: background-color $transition-duration ease-in;
-		margin-right: $gap-size;
+		margin-right: $vw-logo-gap;
 	}
 
 	&::after {
@@ -51,7 +51,7 @@
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	margin-right: $gap-size;
+	margin-right: $vw-logo-gap;
 }
 
 .brandLogo {
@@ -59,7 +59,7 @@
 	height: $brand-logo-size;
 	fill: $white;
 	transition: fill $transition-duration ease-in;
-	margin-right: $gap-size;
+	margin-right: $vw-logo-gap;
 
 	.headerContentWrapper:hover & {
 		fill: $primaryColor;
