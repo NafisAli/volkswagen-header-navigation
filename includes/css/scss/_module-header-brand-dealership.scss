@@ -7,7 +7,6 @@
 		content: "";
 		height: 2px;
 		width: calc((100% - #{$container-width}) / 2);
-
 		background-color: $white;
 		transition: background-color $transition-duration ease-in;
 
