@@ -15,16 +15,6 @@
 			background-color: $primaryColor;
 		}
 	}
-
-	@supports (grid-area: auto) {
-		display: grid;
-		grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
-
-		&::before,
-		&::after {
-			width: auto;
-		}
-	}
 }
 
 .logoDealerNameWrapper {
@@ -33,11 +23,6 @@
 	width: 100%;
 	max-width: $container-width;
 
-	@supports (grid-area: auto) {
-		width: auto;
-		gap: $gap-size;
-	}
-
 	&::before {
 		content: "";
 		height: 2px;
@@ -45,11 +30,6 @@
 		background-color: $white;
 		transition: background-color $transition-duration ease-in;
 		margin-right: $gap-size;
-
-		@supports (grid-area: auto) {
-			width: 3%;
-			margin-right: 0;
-		}
 	}
 
 	&::after {
@@ -73,11 +53,6 @@
 	align-items: center;
 	text-decoration: none;
 	margin-right: $gap-size;
-
-	@supports (grid-area: auto) {
-		gap: $gap-size;
-		margin-right: 0;
-	}
 }
 
 .brandLogo {
@@ -86,10 +61,6 @@
 	fill: $white;
 	transition: fill $transition-duration ease-in;
 	margin-right: $gap-size;
-
-	@supports (grid-area: auto) {
-		margin-right: 0;
-	}
 
 	.headerContentWrapper:hover & {
 		fill: $primaryColor;
